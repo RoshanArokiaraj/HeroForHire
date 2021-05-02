@@ -1,0 +1,1699 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://World/Grass.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Tileset_Forest Background 3.png" type="Texture" id=2]
+[ext_resource path="res://Tileset_Forest (Village and Field).png" type="Texture" id=3]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/ObjectiveCut.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Field.gd" type="Script" id=7]
+[ext_resource path="res://Enemies/Wasp.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Enemies/Slime.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Overworld.wav" type="AudioStream" id=10]
+
+[sub_resource type="TileSet" id=1]
+0/name = "Tileset_Forest (Village and Field).png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 96, 0, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Tileset_Forest (Village and Field).png 1"
+1/texture = ExtResource( 3 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 128, 0, 32, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "Tileset_Forest (Village and Field).png 2"
+2/texture = ExtResource( 3 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 160, 0, 32, 32 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "Tileset_Forest (Village and Field).png 3"
+3/texture = ExtResource( 3 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 96, 32, 32, 32 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "Tileset_Forest (Village and Field).png 4"
+4/texture = ExtResource( 3 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 128, 32, 32, 32 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "Tileset_Forest (Village and Field).png 5"
+5/texture = ExtResource( 3 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 160, 32, 32, 32 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "Tileset_Forest (Village and Field).png 6"
+6/texture = ExtResource( 3 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 96, 64, 32, 32 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "Tileset_Forest (Village and Field).png 7"
+7/texture = ExtResource( 3 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 128, 64, 32, 32 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "Tileset_Forest (Village and Field).png 8"
+8/texture = ExtResource( 3 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 160, 64, 32, 32 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+
+[sub_resource type="TileSet" id=2]
+0/name = "Tileset_Forest (Village and Field).png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 576, 0, 16, 16 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Tileset_Forest (Village and Field).png 1"
+1/texture = ExtResource( 3 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 592, 0, 16, 16 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "Tileset_Forest (Village and Field).png 2"
+2/texture = ExtResource( 3 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 608, 0, 16, 16 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "Tileset_Forest (Village and Field).png 3"
+3/texture = ExtResource( 3 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 624, 0, 16, 16 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "Tileset_Forest (Village and Field).png 4"
+4/texture = ExtResource( 3 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 576, 16, 16, 16 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "Tileset_Forest (Village and Field).png 5"
+5/texture = ExtResource( 3 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 592, 16, 16, 16 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "Tileset_Forest (Village and Field).png 6"
+6/texture = ExtResource( 3 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 608, 16, 16, 16 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "Tileset_Forest (Village and Field).png 7"
+7/texture = ExtResource( 3 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 624, 16, 16, 16 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "Tileset_Forest (Village and Field).png 8"
+8/texture = ExtResource( 3 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 576, 32, 16, 16 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "Tileset_Forest (Village and Field).png 9"
+9/texture = ExtResource( 3 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 592, 32, 16, 16 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "Tileset_Forest (Village and Field).png 10"
+10/texture = ExtResource( 3 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 608, 32, 16, 16 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "Tileset_Forest (Village and Field).png 11"
+11/texture = ExtResource( 3 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 624, 32, 16, 16 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+12/name = "Tileset_Forest (Village and Field).png 12"
+12/texture = ExtResource( 3 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 576, 48, 16, 16 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape_one_way = false
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
+12/z_index = 0
+13/name = "Tileset_Forest (Village and Field).png 13"
+13/texture = ExtResource( 3 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 592, 48, 16, 16 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape_one_way = false
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
+13/z_index = 0
+14/name = "Tileset_Forest (Village and Field).png 14"
+14/texture = ExtResource( 3 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 608, 48, 16, 16 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape_one_way = false
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
+14/z_index = 0
+15/name = "Tileset_Forest (Village and Field).png 15"
+15/texture = ExtResource( 3 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 624, 48, 16, 16 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shape_offset = Vector2( 0, 0 )
+15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+15/shape_one_way = false
+15/shape_one_way_margin = 0.0
+15/shapes = [  ]
+15/z_index = 0
+16/name = "Tileset_Forest (Village and Field).png 16"
+16/texture = ExtResource( 3 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 576, 64, 16, 16 )
+16/tile_mode = 0
+16/occluder_offset = Vector2( 0, 0 )
+16/navigation_offset = Vector2( 0, 0 )
+16/shape_offset = Vector2( 0, 0 )
+16/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+16/shape_one_way = false
+16/shape_one_way_margin = 0.0
+16/shapes = [  ]
+16/z_index = 0
+17/name = "Tileset_Forest (Village and Field).png 17"
+17/texture = ExtResource( 3 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 592, 64, 16, 16 )
+17/tile_mode = 0
+17/occluder_offset = Vector2( 0, 0 )
+17/navigation_offset = Vector2( 0, 0 )
+17/shape_offset = Vector2( 0, 0 )
+17/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+17/shape_one_way = false
+17/shape_one_way_margin = 0.0
+17/shapes = [  ]
+17/z_index = 0
+18/name = "Tileset_Forest (Village and Field).png 18"
+18/texture = ExtResource( 3 )
+18/tex_offset = Vector2( 0, 0 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( 576, 80, 16, 16 )
+18/tile_mode = 0
+18/occluder_offset = Vector2( 0, 0 )
+18/navigation_offset = Vector2( 0, 0 )
+18/shape_offset = Vector2( 0, 0 )
+18/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+18/shape_one_way = false
+18/shape_one_way_margin = 0.0
+18/shapes = [  ]
+18/z_index = 0
+19/name = "Tileset_Forest (Village and Field).png 19"
+19/texture = ExtResource( 3 )
+19/tex_offset = Vector2( 0, 0 )
+19/modulate = Color( 1, 1, 1, 1 )
+19/region = Rect2( 608, 64, 16, 16 )
+19/tile_mode = 0
+19/occluder_offset = Vector2( 0, 0 )
+19/navigation_offset = Vector2( 0, 0 )
+19/shape_offset = Vector2( 0, 0 )
+19/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+19/shape_one_way = false
+19/shape_one_way_margin = 0.0
+19/shapes = [  ]
+19/z_index = 0
+20/name = "Tileset_Forest (Village and Field).png 20"
+20/texture = ExtResource( 3 )
+20/tex_offset = Vector2( 0, 0 )
+20/modulate = Color( 1, 1, 1, 1 )
+20/region = Rect2( 624, 64, 16, 16 )
+20/tile_mode = 0
+20/occluder_offset = Vector2( 0, 0 )
+20/navigation_offset = Vector2( 0, 0 )
+20/shape_offset = Vector2( 0, 0 )
+20/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+20/shape_one_way = false
+20/shape_one_way_margin = 0.0
+20/shapes = [  ]
+20/z_index = 0
+21/name = "Tileset_Forest (Village and Field).png 21"
+21/texture = ExtResource( 3 )
+21/tex_offset = Vector2( 0, 0 )
+21/modulate = Color( 1, 1, 1, 1 )
+21/region = Rect2( 608, 80, 16, 16 )
+21/tile_mode = 0
+21/occluder_offset = Vector2( 0, 0 )
+21/navigation_offset = Vector2( 0, 0 )
+21/shape_offset = Vector2( 0, 0 )
+21/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+21/shape_one_way = false
+21/shape_one_way_margin = 0.0
+21/shapes = [  ]
+21/z_index = 0
+22/name = "Tileset_Forest (Village and Field).png 22"
+22/texture = ExtResource( 3 )
+22/tex_offset = Vector2( 0, 0 )
+22/modulate = Color( 1, 1, 1, 1 )
+22/region = Rect2( 544, 96, 16, 16 )
+22/tile_mode = 0
+22/occluder_offset = Vector2( 0, 0 )
+22/navigation_offset = Vector2( 0, 0 )
+22/shape_offset = Vector2( 0, 0 )
+22/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+22/shape_one_way = false
+22/shape_one_way_margin = 0.0
+22/shapes = [  ]
+22/z_index = 0
+23/name = "Tileset_Forest (Village and Field).png 23"
+23/texture = ExtResource( 3 )
+23/tex_offset = Vector2( 0, 0 )
+23/modulate = Color( 1, 1, 1, 1 )
+23/region = Rect2( 560, 96, 16, 16 )
+23/tile_mode = 0
+23/occluder_offset = Vector2( 0, 0 )
+23/navigation_offset = Vector2( 0, 0 )
+23/shape_offset = Vector2( 0, 0 )
+23/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+23/shape_one_way = false
+23/shape_one_way_margin = 0.0
+23/shapes = [  ]
+23/z_index = 0
+24/name = "Tileset_Forest (Village and Field).png 24"
+24/texture = ExtResource( 3 )
+24/tex_offset = Vector2( 0, 0 )
+24/modulate = Color( 1, 1, 1, 1 )
+24/region = Rect2( 544, 112, 16, 16 )
+24/tile_mode = 0
+24/occluder_offset = Vector2( 0, 0 )
+24/navigation_offset = Vector2( 0, 0 )
+24/shape_offset = Vector2( 0, 0 )
+24/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+24/shape_one_way = false
+24/shape_one_way_margin = 0.0
+24/shapes = [  ]
+24/z_index = 0
+25/name = "Tileset_Forest (Village and Field).png 25"
+25/texture = ExtResource( 3 )
+25/tex_offset = Vector2( 0, 0 )
+25/modulate = Color( 1, 1, 1, 1 )
+25/region = Rect2( 560, 112, 16, 16 )
+25/tile_mode = 0
+25/occluder_offset = Vector2( 0, 0 )
+25/navigation_offset = Vector2( 0, 0 )
+25/shape_offset = Vector2( 0, 0 )
+25/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+25/shape_one_way = false
+25/shape_one_way_margin = 0.0
+25/shapes = [  ]
+25/z_index = 0
+26/name = "Tileset_Forest (Village and Field).png 26"
+26/texture = ExtResource( 3 )
+26/tex_offset = Vector2( 0, 0 )
+26/modulate = Color( 1, 1, 1, 1 )
+26/region = Rect2( 576, 96, 16, 16 )
+26/tile_mode = 0
+26/occluder_offset = Vector2( 0, 0 )
+26/navigation_offset = Vector2( 0, 0 )
+26/shape_offset = Vector2( 0, 0 )
+26/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+26/shape_one_way = false
+26/shape_one_way_margin = 0.0
+26/shapes = [  ]
+26/z_index = 0
+27/name = "Tileset_Forest (Village and Field).png 27"
+27/texture = ExtResource( 3 )
+27/tex_offset = Vector2( 0, 0 )
+27/modulate = Color( 1, 1, 1, 1 )
+27/region = Rect2( 592, 96, 16, 16 )
+27/tile_mode = 0
+27/occluder_offset = Vector2( 0, 0 )
+27/navigation_offset = Vector2( 0, 0 )
+27/shape_offset = Vector2( 0, 0 )
+27/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+27/shape_one_way = false
+27/shape_one_way_margin = 0.0
+27/shapes = [  ]
+27/z_index = 0
+28/name = "Tileset_Forest (Village and Field).png 28"
+28/texture = ExtResource( 3 )
+28/tex_offset = Vector2( 0, 0 )
+28/modulate = Color( 1, 1, 1, 1 )
+28/region = Rect2( 576, 112, 32, 16 )
+28/tile_mode = 0
+28/occluder_offset = Vector2( 0, 0 )
+28/navigation_offset = Vector2( 0, 0 )
+28/shape_offset = Vector2( 0, 0 )
+28/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+28/shape_one_way = false
+28/shape_one_way_margin = 0.0
+28/shapes = [  ]
+28/z_index = 0
+29/name = "Tileset_Forest (Village and Field).png 29"
+29/texture = ExtResource( 3 )
+29/tex_offset = Vector2( 0, 0 )
+29/modulate = Color( 1, 1, 1, 1 )
+29/region = Rect2( 608, 112, 32, 16 )
+29/tile_mode = 0
+29/occluder_offset = Vector2( 0, 0 )
+29/navigation_offset = Vector2( 0, 0 )
+29/shape_offset = Vector2( 0, 0 )
+29/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+29/shape_one_way = false
+29/shape_one_way_margin = 0.0
+29/shapes = [  ]
+29/z_index = 0
+30/name = "Tileset_Forest (Village and Field).png 30"
+30/texture = ExtResource( 3 )
+30/tex_offset = Vector2( 0, 0 )
+30/modulate = Color( 1, 1, 1, 1 )
+30/region = Rect2( 608, 96, 16, 16 )
+30/tile_mode = 0
+30/occluder_offset = Vector2( 0, 0 )
+30/navigation_offset = Vector2( 0, 0 )
+30/shape_offset = Vector2( 0, 0 )
+30/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+30/shape_one_way = false
+30/shape_one_way_margin = 0.0
+30/shapes = [  ]
+30/z_index = 0
+31/name = "Tileset_Forest (Village and Field).png 31"
+31/texture = ExtResource( 3 )
+31/tex_offset = Vector2( 0, 0 )
+31/modulate = Color( 1, 1, 1, 1 )
+31/region = Rect2( 624, 96, 16, 16 )
+31/tile_mode = 0
+31/occluder_offset = Vector2( 0, 0 )
+31/navigation_offset = Vector2( 0, 0 )
+31/shape_offset = Vector2( 0, 0 )
+31/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+31/shape_one_way = false
+31/shape_one_way_margin = 0.0
+31/shapes = [  ]
+31/z_index = 0
+32/name = "Tileset_Forest (Village and Field).png 32"
+32/texture = ExtResource( 3 )
+32/tex_offset = Vector2( 0, 0 )
+32/modulate = Color( 1, 1, 1, 1 )
+32/region = Rect2( 576, 128, 32, 32 )
+32/tile_mode = 0
+32/occluder_offset = Vector2( 0, 0 )
+32/navigation_offset = Vector2( 0, 0 )
+32/shape_offset = Vector2( 0, 0 )
+32/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+32/shape_one_way = false
+32/shape_one_way_margin = 0.0
+32/shapes = [  ]
+32/z_index = 0
+33/name = "Tileset_Forest (Village and Field).png 33"
+33/texture = ExtResource( 3 )
+33/tex_offset = Vector2( 0, 0 )
+33/modulate = Color( 1, 1, 1, 1 )
+33/region = Rect2( 608, 128, 32, 32 )
+33/tile_mode = 0
+33/occluder_offset = Vector2( 0, 0 )
+33/navigation_offset = Vector2( 0, 0 )
+33/shape_offset = Vector2( 0, 0 )
+33/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+33/shape_one_way = false
+33/shape_one_way_margin = 0.0
+33/shapes = [  ]
+33/z_index = 0
+34/name = "Tileset_Forest (Village and Field).png 34"
+34/texture = ExtResource( 3 )
+34/tex_offset = Vector2( 0, 0 )
+34/modulate = Color( 1, 1, 1, 1 )
+34/region = Rect2( 608, 160, 16, 16 )
+34/tile_mode = 0
+34/occluder_offset = Vector2( 0, 0 )
+34/navigation_offset = Vector2( 0, 0 )
+34/shape_offset = Vector2( 0, 0 )
+34/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+34/shape_one_way = false
+34/shape_one_way_margin = 0.0
+34/shapes = [  ]
+34/z_index = 0
+35/name = "Tileset_Forest (Village and Field).png 35"
+35/texture = ExtResource( 3 )
+35/tex_offset = Vector2( 0, 0 )
+35/modulate = Color( 1, 1, 1, 1 )
+35/region = Rect2( 624, 160, 16, 16 )
+35/tile_mode = 0
+35/occluder_offset = Vector2( 0, 0 )
+35/navigation_offset = Vector2( 0, 0 )
+35/shape_offset = Vector2( 0, 0 )
+35/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+35/shape_one_way = false
+35/shape_one_way_margin = 0.0
+35/shapes = [  ]
+35/z_index = 0
+36/name = "Tileset_Forest (Village and Field).png 36"
+36/texture = ExtResource( 3 )
+36/tex_offset = Vector2( 0, 0 )
+36/modulate = Color( 1, 1, 1, 1 )
+36/region = Rect2( 608, 176, 16, 16 )
+36/tile_mode = 0
+36/occluder_offset = Vector2( 0, 0 )
+36/navigation_offset = Vector2( 0, 0 )
+36/shape_offset = Vector2( 0, 0 )
+36/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+36/shape_one_way = false
+36/shape_one_way_margin = 0.0
+36/shapes = [  ]
+36/z_index = 0
+37/name = "Tileset_Forest (Village and Field).png 37"
+37/texture = ExtResource( 3 )
+37/tex_offset = Vector2( 0, 0 )
+37/modulate = Color( 1, 1, 1, 1 )
+37/region = Rect2( 624, 176, 16, 16 )
+37/tile_mode = 0
+37/occluder_offset = Vector2( 0, 0 )
+37/navigation_offset = Vector2( 0, 0 )
+37/shape_offset = Vector2( 0, 0 )
+37/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+37/shape_one_way = false
+37/shape_one_way_margin = 0.0
+37/shapes = [  ]
+37/z_index = 0
+38/name = "Tileset_Forest (Village and Field).png 38"
+38/texture = ExtResource( 3 )
+38/tex_offset = Vector2( 0, 0 )
+38/modulate = Color( 1, 1, 1, 1 )
+38/region = Rect2( 608, 192, 32, 32 )
+38/tile_mode = 0
+38/occluder_offset = Vector2( 0, 0 )
+38/navigation_offset = Vector2( 0, 0 )
+38/shape_offset = Vector2( 0, 0 )
+38/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+38/shape_one_way = false
+38/shape_one_way_margin = 0.0
+38/shapes = [  ]
+38/z_index = 0
+39/name = "Tileset_Forest (Village and Field).png 39"
+39/texture = ExtResource( 3 )
+39/tex_offset = Vector2( 0, 0 )
+39/modulate = Color( 1, 1, 1, 1 )
+39/region = Rect2( 576, 224, 32, 32 )
+39/tile_mode = 0
+39/occluder_offset = Vector2( 0, 0 )
+39/navigation_offset = Vector2( 0, 0 )
+39/shape_offset = Vector2( 0, 0 )
+39/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+39/shape_one_way = false
+39/shape_one_way_margin = 0.0
+39/shapes = [  ]
+39/z_index = 0
+40/name = "Tileset_Forest (Village and Field).png 40"
+40/texture = ExtResource( 3 )
+40/tex_offset = Vector2( 0, 0 )
+40/modulate = Color( 1, 1, 1, 1 )
+40/region = Rect2( 480, 192, 32, 32 )
+40/tile_mode = 0
+40/occluder_offset = Vector2( 0, 0 )
+40/navigation_offset = Vector2( 0, 0 )
+40/shape_offset = Vector2( 0, 0 )
+40/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+40/shape_one_way = false
+40/shape_one_way_margin = 0.0
+40/shapes = [  ]
+40/z_index = 0
+41/name = "Tileset_Forest (Village and Field).png 41"
+41/texture = ExtResource( 3 )
+41/tex_offset = Vector2( 0, 0 )
+41/modulate = Color( 1, 1, 1, 1 )
+41/region = Rect2( 480, 224, 32, 32 )
+41/tile_mode = 0
+41/occluder_offset = Vector2( 0, 0 )
+41/navigation_offset = Vector2( 0, 0 )
+41/shape_offset = Vector2( 0, 0 )
+41/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+41/shape_one_way = false
+41/shape_one_way_margin = 0.0
+41/shapes = [  ]
+41/z_index = 0
+42/name = "Tileset_Forest (Village and Field).png 42"
+42/texture = ExtResource( 3 )
+42/tex_offset = Vector2( 0, 0 )
+42/modulate = Color( 1, 1, 1, 1 )
+42/region = Rect2( 448, 192, 32, 32 )
+42/tile_mode = 0
+42/occluder_offset = Vector2( 0, 0 )
+42/navigation_offset = Vector2( 0, 0 )
+42/shape_offset = Vector2( 0, 0 )
+42/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+42/shape_one_way = false
+42/shape_one_way_margin = 0.0
+42/shapes = [  ]
+42/z_index = 0
+43/name = "Tileset_Forest (Village and Field).png 43"
+43/texture = ExtResource( 3 )
+43/tex_offset = Vector2( 0, 0 )
+43/modulate = Color( 1, 1, 1, 1 )
+43/region = Rect2( 448, 224, 32, 32 )
+43/tile_mode = 0
+43/occluder_offset = Vector2( 0, 0 )
+43/navigation_offset = Vector2( 0, 0 )
+43/shape_offset = Vector2( 0, 0 )
+43/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+43/shape_one_way = false
+43/shape_one_way_margin = 0.0
+43/shapes = [  ]
+43/z_index = 0
+44/name = "Tileset_Forest (Village and Field).png 44"
+44/texture = ExtResource( 3 )
+44/tex_offset = Vector2( 0, 0 )
+44/modulate = Color( 1, 1, 1, 1 )
+44/region = Rect2( 416, 192, 32, 32 )
+44/tile_mode = 0
+44/occluder_offset = Vector2( 0, 0 )
+44/navigation_offset = Vector2( 0, 0 )
+44/shape_offset = Vector2( 0, 0 )
+44/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+44/shape_one_way = false
+44/shape_one_way_margin = 0.0
+44/shapes = [  ]
+44/z_index = 0
+45/name = "Tileset_Forest (Village and Field).png 45"
+45/texture = ExtResource( 3 )
+45/tex_offset = Vector2( 0, 0 )
+45/modulate = Color( 1, 1, 1, 1 )
+45/region = Rect2( 416, 224, 32, 32 )
+45/tile_mode = 0
+45/occluder_offset = Vector2( 0, 0 )
+45/navigation_offset = Vector2( 0, 0 )
+45/shape_offset = Vector2( 0, 0 )
+45/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+45/shape_one_way = false
+45/shape_one_way_margin = 0.0
+45/shapes = [  ]
+45/z_index = 0
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
+
+[sub_resource type="TileSet" id=4]
+0/name = "Tileset_Forest (Village and Field).png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 288, 128, 128 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 3 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "Tileset_Forest (Village and Field).png 1"
+1/texture = ExtResource( 3 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 416, 192, 32, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "Tileset_Forest (Village and Field).png 2"
+2/texture = ExtResource( 3 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 416, 224, 32, 32 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "Tileset_Forest (Village and Field).png 3"
+3/texture = ExtResource( 3 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 480, 192, 32, 32 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "Tileset_Forest (Village and Field).png 4"
+4/texture = ExtResource( 3 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 448, 192, 32, 32 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "Tileset_Forest (Village and Field).png 5"
+5/texture = ExtResource( 3 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 448, 224, 32, 32 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "Tileset_Forest (Village and Field).png 6"
+6/texture = ExtResource( 3 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 480, 224, 32, 32 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "Tileset_Forest (Village and Field).png 7"
+7/texture = ExtResource( 3 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 608, 192, 32, 32 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "Tileset_Forest (Village and Field).png 8"
+8/texture = ExtResource( 3 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 576, 224, 32, 32 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+10/name = "Tileset_Forest (Village and Field).png 10"
+10/texture = ExtResource( 3 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 608, 160, 16, 16 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "Tileset_Forest (Village and Field).png 11"
+11/texture = ExtResource( 3 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 624, 160, 16, 16 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+12/name = "Tileset_Forest (Village and Field).png 12"
+12/texture = ExtResource( 3 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 608, 176, 16, 16 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape_one_way = false
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
+12/z_index = 0
+13/name = "Tileset_Forest (Village and Field).png 13"
+13/texture = ExtResource( 3 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 624, 176, 16, 16 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape_one_way = false
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
+13/z_index = 0
+14/name = "Tileset_Forest (Village and Field).png 14"
+14/texture = ExtResource( 3 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 608, 128, 32, 32 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape_one_way = false
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
+14/z_index = 0
+15/name = "Tileset_Forest (Village and Field).png 15"
+15/texture = ExtResource( 3 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 576, 128, 32, 32 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shape_offset = Vector2( 0, 0 )
+15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+15/shape_one_way = false
+15/shape_one_way_margin = 0.0
+15/shapes = [  ]
+15/z_index = 0
+16/name = "Tileset_Forest (Village and Field).png 16"
+16/texture = ExtResource( 3 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 576, 112, 32, 16 )
+16/tile_mode = 0
+16/occluder_offset = Vector2( 0, 0 )
+16/navigation_offset = Vector2( 0, 0 )
+16/shape_offset = Vector2( 0, 0 )
+16/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+16/shape_one_way = false
+16/shape_one_way_margin = 0.0
+16/shapes = [  ]
+16/z_index = 0
+17/name = "Tileset_Forest (Village and Field).png 17"
+17/texture = ExtResource( 3 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 544, 96, 16, 16 )
+17/tile_mode = 0
+17/occluder_offset = Vector2( 0, 0 )
+17/navigation_offset = Vector2( 0, 0 )
+17/shape_offset = Vector2( 0, 0 )
+17/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+17/shape_one_way = false
+17/shape_one_way_margin = 0.0
+17/shapes = [  ]
+17/z_index = 0
+18/name = "Tileset_Forest (Village and Field).png 18"
+18/texture = ExtResource( 3 )
+18/tex_offset = Vector2( 0, 0 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( 560, 96, 16, 16 )
+18/tile_mode = 0
+18/occluder_offset = Vector2( 0, 0 )
+18/navigation_offset = Vector2( 0, 0 )
+18/shape_offset = Vector2( 0, 0 )
+18/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+18/shape_one_way = false
+18/shape_one_way_margin = 0.0
+18/shapes = [  ]
+18/z_index = 0
+19/name = "Tileset_Forest (Village and Field).png 19"
+19/texture = ExtResource( 3 )
+19/tex_offset = Vector2( 0, 0 )
+19/modulate = Color( 1, 1, 1, 1 )
+19/region = Rect2( 544, 112, 16, 16 )
+19/tile_mode = 0
+19/occluder_offset = Vector2( 0, 0 )
+19/navigation_offset = Vector2( 0, 0 )
+19/shape_offset = Vector2( 0, 0 )
+19/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+19/shape_one_way = false
+19/shape_one_way_margin = 0.0
+19/shapes = [  ]
+19/z_index = 0
+20/name = "Tileset_Forest (Village and Field).png 20"
+20/texture = ExtResource( 3 )
+20/tex_offset = Vector2( 0, 0 )
+20/modulate = Color( 1, 1, 1, 1 )
+20/region = Rect2( 560, 112, 16, 16 )
+20/tile_mode = 0
+20/occluder_offset = Vector2( 0, 0 )
+20/navigation_offset = Vector2( 0, 0 )
+20/shape_offset = Vector2( 0, 0 )
+20/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+20/shape_one_way = false
+20/shape_one_way_margin = 0.0
+20/shapes = [  ]
+20/z_index = 0
+21/name = "Tileset_Forest (Village and Field).png 21"
+21/texture = ExtResource( 3 )
+21/tex_offset = Vector2( 0, 0 )
+21/modulate = Color( 1, 1, 1, 1 )
+21/region = Rect2( 576, 96, 16, 16 )
+21/tile_mode = 0
+21/occluder_offset = Vector2( 0, 0 )
+21/navigation_offset = Vector2( 0, 0 )
+21/shape_offset = Vector2( 0, 0 )
+21/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+21/shape_one_way = false
+21/shape_one_way_margin = 0.0
+21/shapes = [  ]
+21/z_index = 0
+22/name = "Tileset_Forest (Village and Field).png 22"
+22/texture = ExtResource( 3 )
+22/tex_offset = Vector2( 0, 0 )
+22/modulate = Color( 1, 1, 1, 1 )
+22/region = Rect2( 592, 96, 16, 16 )
+22/tile_mode = 0
+22/occluder_offset = Vector2( 0, 0 )
+22/navigation_offset = Vector2( 0, 0 )
+22/shape_offset = Vector2( 0, 0 )
+22/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+22/shape_one_way = false
+22/shape_one_way_margin = 0.0
+22/shapes = [  ]
+22/z_index = 0
+23/name = "Tileset_Forest (Village and Field).png 23"
+23/texture = ExtResource( 3 )
+23/tex_offset = Vector2( 0, 0 )
+23/modulate = Color( 1, 1, 1, 1 )
+23/region = Rect2( 608, 96, 16, 16 )
+23/tile_mode = 0
+23/occluder_offset = Vector2( 0, 0 )
+23/navigation_offset = Vector2( 0, 0 )
+23/shape_offset = Vector2( 0, 0 )
+23/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+23/shape_one_way = false
+23/shape_one_way_margin = 0.0
+23/shapes = [  ]
+23/z_index = 0
+24/name = "Tileset_Forest (Village and Field).png 24"
+24/texture = ExtResource( 3 )
+24/tex_offset = Vector2( 0, 0 )
+24/modulate = Color( 1, 1, 1, 1 )
+24/region = Rect2( 624, 96, 16, 16 )
+24/tile_mode = 0
+24/occluder_offset = Vector2( 0, 0 )
+24/navigation_offset = Vector2( 0, 0 )
+24/shape_offset = Vector2( 0, 0 )
+24/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+24/shape_one_way = false
+24/shape_one_way_margin = 0.0
+24/shapes = [  ]
+24/z_index = 0
+25/name = "Tileset_Forest (Village and Field).png 25"
+25/texture = ExtResource( 3 )
+25/tex_offset = Vector2( 0, 0 )
+25/modulate = Color( 1, 1, 1, 1 )
+25/region = Rect2( 608, 112, 32, 16 )
+25/tile_mode = 0
+25/occluder_offset = Vector2( 0, 0 )
+25/navigation_offset = Vector2( 0, 0 )
+25/shape_offset = Vector2( 0, 0 )
+25/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+25/shape_one_way = false
+25/shape_one_way_margin = 0.0
+25/shapes = [  ]
+25/z_index = 0
+26/name = "Tileset_Forest (Village and Field).png 26"
+26/texture = ExtResource( 3 )
+26/tex_offset = Vector2( 0, 0 )
+26/modulate = Color( 1, 1, 1, 1 )
+26/region = Rect2( 608, 64, 16, 16 )
+26/tile_mode = 0
+26/occluder_offset = Vector2( 0, 0 )
+26/navigation_offset = Vector2( 0, 0 )
+26/shape_offset = Vector2( 0, 0 )
+26/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+26/shape_one_way = false
+26/shape_one_way_margin = 0.0
+26/shapes = [  ]
+26/z_index = 0
+27/name = "Tileset_Forest (Village and Field).png 27"
+27/texture = ExtResource( 3 )
+27/tex_offset = Vector2( 0, 0 )
+27/modulate = Color( 1, 1, 1, 1 )
+27/region = Rect2( 624, 64, 16, 16 )
+27/tile_mode = 0
+27/occluder_offset = Vector2( 0, 0 )
+27/navigation_offset = Vector2( 0, 0 )
+27/shape_offset = Vector2( 0, 0 )
+27/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+27/shape_one_way = false
+27/shape_one_way_margin = 0.0
+27/shapes = [  ]
+27/z_index = 0
+28/name = "Tileset_Forest (Village and Field).png 28"
+28/texture = ExtResource( 3 )
+28/tex_offset = Vector2( 0, 0 )
+28/modulate = Color( 1, 1, 1, 1 )
+28/region = Rect2( 608, 80, 16, 16 )
+28/tile_mode = 0
+28/occluder_offset = Vector2( 0, 0 )
+28/navigation_offset = Vector2( 0, 0 )
+28/shape_offset = Vector2( 0, 0 )
+28/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+28/shape_one_way = false
+28/shape_one_way_margin = 0.0
+28/shapes = [  ]
+28/z_index = 0
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 160.554, 271.905 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 740, 740 )
+region_filter_clip = true
+
+[node name="Path" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -131064, 3, 0, -131062, 5, 0, -65528, 3, 0, -65526, 5, 0, 8, 3, 0, 65544, 3, 0, 65546, 5, 0, 131080, 3, 0, 131082, 5, 0, 196616, 3, 0, 196618, 5, 0, 262152, 3, 0, 262154, 5, 0, 327688, 3, 0, 327690, 5, 0, 393224, 3, 0, 393226, 5, 0, 458760, 6, 0, 458762, 8, 0 )
+
+[node name="Detailing" type="TileMap" parent="."]
+tile_set = SubResource( 2 )
+cell_size = Vector2( 8, 8 )
+format = 1
+tile_data = PoolIntArray( -131055, 9, 0, -131051, 3, 0, -65512, 33, 0, -65483, 39, 0, 65521, 39, 0, 51, 39, 0, 131055, 39, 0, 131064, 44, 0, 65553, 2, 0, 65555, 9, 0, 65590, 39, 0, 196594, 39, 0, 131116, 28, 0, 131124, 39, 0, 262128, 39, 0, 262130, 25, 0, 196616, 40, 0, 196625, 15, 0, 196628, 11, 0, 196638, 25, 0, 196642, 41, 0, 327698, 1, 0, 327729, 24, 0, 393243, 35, 0, 393247, 19, 0, 393258, 24, 0, 524285, 21, 0, 458772, 13, 0, 458789, 21, 0, 458801, 37, 0, 524298, 32, 0, 524306, 5, 0, 655353, 24, 0, 655354, 36, 0, 589833, 25, 0, 589845, 1, 0, 720883, 20, 0, 720896, 24, 0, 720914, 9, 0, 720949, 20, 0, 983030, 28, 0, 917524, 10, 0, 983057, 18, 0, 983061, 24, 0, 1048578, 38, 0, 1114142, 24, 0, 1245166, 24, 0, 1179655, 21, 0, 1179691, 24, 0, 1245210, 20, 0, 1376299, 21, 0, 1703942, 24, 0, 1703945, 29, 0, 1769491, 25, 0, 1769498, 34, 0, 2031633, 21, 0, 2228236, 36, 0, 2228241, 24, 0, 2228277, 41, 0, 2359301, 25, 0, 2621425, 24, 0, 2555907, 20, 0, 2555935, 37, 0, 2555937, 24, 0, 2621451, 24, 0, 2621476, 40, 0, 2752559, 34, 0, 2949106, 37, 0, 3014698, 21, 0, 3080226, 31, 0, 3145770, 25, 0, 3407862, 19, 0, 3342371, 38, 0, 3342385, 32, 0, 3473401, 40, 0, 3407920, 24, 0, 3604479, 34, 0, 3670003, 24, 0, 3604498, 25, 0, 3604519, 24, 0, 3735546, 24, 0, 3670052, 20, 0, 3866621, 24, 0, 3801135, 21, 0, 3932149, 30, 0, 3932158, 21, 0, 3866677, 39, 0, 3997682, 33, 0, 3932208, 44, 0, 3932211, 39, 0, 3997750, 39, 0, 4063270, 35, 0, 4063284, 39, 0, 4194292, 25, 0 )
+
+[node name="Trees" type="TileMap" parent="."]
+tile_set = SubResource( 4 )
+format = 1
+tile_data = PoolIntArray( -131077, 0, 0, -131076, 0, 0, -131075, 0, 0, -131074, 0, 0, -131073, 0, 0, -196608, 0, 0, -196607, 0, 0, -196606, 0, 0, -196605, 0, 0, -196604, 0, 0, -196603, 0, 0, -196602, 0, 0, -196601, 0, 0, -196600, 0, 0, -65541, 0, 0, -65540, 0, 0, -65539, 0, 0, -65538, 0, 0, -65537, 0, 0, -131072, 0, 0, -131071, 0, 0, -131070, 0, 0, -131069, 0, 0, -131068, 0, 0, -131067, 0, 0, -131066, 0, 0, -131065, 0, 0, -131064, 0, 0, -5, 0, 0, -4, 0, 0, -65529, 0, 0, -65528, 0, 0, 65531, 0, 0, 65532, 0, 0, 7, 0, 0, 8, 0, 0, 131067, 0, 0, 131068, 0, 0, 65543, 0, 0, 65544, 0, 0, 196603, 0, 0, 196604, 0, 0, 131079, 0, 0, 131080, 0, 0, 262139, 0, 0, 262140, 0, 0, 196615, 0, 0, 196616, 0, 0, 327675, 0, 0, 327676, 0, 0, 262151, 0, 0, 262152, 0, 0, 393211, 0, 0, 393212, 0, 0, 327687, 0, 0, 327688, 0, 0, 458747, 0, 0, 458748, 0, 0, 393223, 0, 0, 393224, 0, 0, 524283, 0, 0, 524284, 0, 0, 458759, 0, 0, 458760, 0, 0, 589819, 0, 0, 589820, 0, 0, 589821, 0, 0, 589822, 0, 0, 589823, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 655355, 0, 0, 655356, 0, 0, 655357, 0, 0, 655358, 0, 0, 655359, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 160, 90 )
+
+[node name="Camera2D" type="Camera2D" parent="YSort/Player"]
+current = true
+
+[node name="Wasp" parent="YSort/Player" instance=ExtResource( 8 )]
+position = Vector2( -212.925, 40.0904 )
+
+[node name="Wasp2" parent="YSort/Player" instance=ExtResource( 8 )]
+position = Vector2( -140.665, 348.17 )
+
+[node name="Wasp3" parent="YSort/Player" instance=ExtResource( 8 )]
+position = Vector2( 182.483, 326.25 )
+
+[node name="Grass2" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -56, 184 )
+
+[node name="Grass10" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -56, 184 )
+
+[node name="Grass11" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -56, 184 )
+
+[node name="Grass12" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -56, 184 )
+
+[node name="Grass13" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -88, 184 )
+
+[node name="Grass18" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -104, 184 )
+
+[node name="Grass19" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -104, 199.905 )
+
+[node name="Grass15" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -88, 200 )
+
+[node name="Grass17" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -72, 200 )
+
+[node name="Grass16" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -72, 184 )
+
+[node name="Grass14" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -56, 199.905 )
+
+[node name="Grass20" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -56, 216 )
+
+[node name="Grass23" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -56, 232 )
+
+[node name="Grass24" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -56, 248 )
+
+[node name="Grass25" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -56, 264 )
+
+[node name="Grass28" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -56, 280 )
+
+[node name="Grass31" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -56, 296 )
+
+[node name="Grass72" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -56, 312 )
+
+[node name="Grass73" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -56, 312 )
+
+[node name="Grass74" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -56, 328 )
+
+[node name="Grass78" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -56, 344 )
+
+[node name="Grass79" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -56, 359.905 )
+
+[node name="Grass80" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -40, 360 )
+
+[node name="Grass81" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -40, 343.905 )
+
+[node name="Grass82" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -40, 343.905 )
+
+[node name="Grass75" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -40, 312 )
+
+[node name="Grass76" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -40, 327.905 )
+
+[node name="Grass77" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -40, 327.905 )
+
+[node name="Grass35" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 144, 336 )
+
+[node name="Grass39" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 128, 336 )
+
+[node name="Grass40" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 112, 352 )
+
+[node name="Grass46" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 112, 368 )
+
+[node name="Grass47" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 128, 368 )
+
+[node name="Grass48" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 128, 384 )
+
+[node name="Grass49" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 144, 384 )
+
+[node name="Grass50" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 144, 400 )
+
+[node name="Grass51" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 160.554, 400 )
+
+[node name="Grass52" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 160, 416 )
+
+[node name="Grass53" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 176.554, 416 )
+
+[node name="Grass54" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 176.554, 432 )
+
+[node name="Grass55" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 192.554, 432 )
+
+[node name="Grass56" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 192, 448 )
+
+[node name="Grass57" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 208.554, 448 )
+
+[node name="Grass58" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 208.554, 464 )
+
+[node name="Grass59" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 192, 464 )
+
+[node name="Grass60" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 192.554, 480 )
+
+[node name="Grass61" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 176.554, 480 )
+
+[node name="Grass62" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 160.554, 480 )
+
+[node name="Grass63" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 144, 480 )
+
+[node name="Grass64" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 160.554, 496 )
+
+[node name="Grass70" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 144, 496 )
+
+[node name="Grass71" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 176.554, 496 )
+
+[node name="Grass65" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 128, 448 )
+
+[node name="Grass66" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 112, 448 )
+
+[node name="Grass67" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 112, 464 )
+
+[node name="Grass68" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 128, 480 )
+
+[node name="Grass69" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 128, 464 )
+
+[node name="Grass41" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 128, 352 )
+
+[node name="Grass42" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 192.554, 351.81 )
+
+[node name="Grass43" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 208.554, 352 )
+
+[node name="Grass44" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 208.554, 367.81 )
+
+[node name="Grass45" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 192.554, 367.81 )
+
+[node name="Grass36" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 160.554, 336 )
+
+[node name="Grass37" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 176.554, 336 )
+
+[node name="Grass38" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 192.554, 336 )
+
+[node name="Grass34" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 176.554, 320 )
+
+[node name="Grass33" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 160.554, 320 )
+
+[node name="Grass32" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 144, 320 )
+
+[node name="Grass5" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -24, 200 )
+
+[node name="Grass" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -8, 184 )
+
+[node name="Grass3" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 8, 199.905 )
+
+[node name="Grass4" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -40, 184 )
+
+[node name="Grass7" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -8, 199.905 )
+
+[node name="Grass8" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -24, 184 )
+
+[node name="Grass9" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -40, 199.905 )
+
+[node name="Grass21" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -40, 216 )
+
+[node name="Grass22" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -40, 232 )
+
+[node name="Grass26" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -40, 248 )
+
+[node name="Grass27" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -40, 264 )
+
+[node name="Grass29" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -40, 280 )
+
+[node name="Grass30" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -40, 296 )
+
+[node name="Grass6" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 8, 184 )
+
+[node name="Grass83" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 336, 80 )
+
+[node name="Grass84" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 352, 80 )
+
+[node name="Grass85" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 320, 96 )
+
+[node name="Grass90" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 320, 112 )
+
+[node name="Grass91" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 304, 112 )
+
+[node name="Grass92" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 304, 128 )
+
+[node name="Grass93" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 304, 128 )
+
+[node name="Grass94" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 320, 128 )
+
+[node name="Grass95" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 368, 112 )
+
+[node name="Grass96" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 384, 112 )
+
+[node name="Grass97" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 320, 143.81 )
+
+[node name="Grass100" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 304, 144 )
+
+[node name="Grass101" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 384, 144 )
+
+[node name="Grass102" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 368, 144 )
+
+[node name="Grass103" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 320.554, 176 )
+
+[node name="Grass132" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 320.554, 192 )
+
+[node name="Grass133" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 336, 192 )
+
+[node name="Grass134" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 352, 192 )
+
+[node name="Grass135" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 368, 192 )
+
+[node name="Grass136" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 368, 207.81 )
+
+[node name="Grass137" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 352, 208 )
+
+[node name="Grass138" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 336, 208 )
+
+[node name="Grass139" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 320.554, 208 )
+
+[node name="Grass140" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 320.554, 208 )
+
+[node name="Grass104" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 304, 160 )
+
+[node name="Grass105" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 320, 160 )
+
+[node name="Grass106" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 336, 112 )
+
+[node name="Grass107" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 352, 112 )
+
+[node name="Grass108" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 304, 176 )
+
+[node name="Grass109" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 368, 160 )
+
+[node name="Grass110" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 384, 160 )
+
+[node name="Grass112" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 288, 192 )
+
+[node name="Grass114" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 304, 192 )
+
+[node name="Grass118" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 304, 208 )
+
+[node name="Grass119" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 288, 208 )
+
+[node name="Grass120" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 288, 224 )
+
+[node name="Grass121" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 304, 224 )
+
+[node name="Grass122" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 304, 239.905 )
+
+[node name="Grass141" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 304, 256 )
+
+[node name="Grass142" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 288, 256 )
+
+[node name="Grass143" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 288, 256 )
+
+[node name="Grass123" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 288, 239.905 )
+
+[node name="Grass124" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 288, 239.905 )
+
+[node name="Grass115" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 384, 192 )
+
+[node name="Grass125" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 384, 208 )
+
+[node name="Grass126" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 384, 223.905 )
+
+[node name="Grass128" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 384, 239.905 )
+
+[node name="Grass129" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 384, 239.905 )
+
+[node name="Grass144" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 384, 255.905 )
+
+[node name="Grass145" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 384, 255.905 )
+
+[node name="Grass116" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 400, 192 )
+
+[node name="Grass117" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 400, 208 )
+
+[node name="Grass127" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 400, 208 )
+
+[node name="Grass130" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 400, 224 )
+
+[node name="Grass131" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 400, 255.905 )
+
+[node name="Grass146" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 400, 239.905 )
+
+[node name="Grass147" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 400, 239.905 )
+
+[node name="Grass113" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 384, 176 )
+
+[node name="Grass111" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 368, 176 )
+
+[node name="Grass98" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 368, 127.905 )
+
+[node name="Grass99" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 384, 128 )
+
+[node name="Grass86" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 352, 96 )
+
+[node name="Grass88" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 368, 96 )
+
+[node name="Grass89" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 368, 96 )
+
+[node name="Grass87" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 336, 96 )
+
+[node name="Slime" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 295.571, 79.196 )
+
+[node name="Slime2" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 200.111, 261.63 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HealthUI" parent="CanvasLayer" instance=ExtResource( 5 )]
+margin_left = 229.0
+margin_top = 2.0
+margin_right = 269.0
+margin_bottom = 42.0
+
+[node name="Objective" parent="CanvasLayer" instance=ExtResource( 6 )]
+margin_left = 63.712
+margin_top = 10.527
+margin_right = 63.712
+margin_bottom = 10.527
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 10 )
+autoplay = true

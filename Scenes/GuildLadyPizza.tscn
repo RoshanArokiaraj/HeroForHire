@@ -1,0 +1,243 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://NPC_Old Man.png" type="Texture" id=1]
+[ext_resource path="res://Action RPG Resources/Shadows/SmallShadow.png" type="Texture" id=2]
+[ext_resource path="res://NPC_Concierge.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/GuildLadyPizza.gd" type="Script" id=4]
+[ext_resource path="res://Minecraftia-Regular.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 256, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 320, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 384, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 448, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 3 )
+region = Rect2( 64, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 3 )
+region = Rect2( 128, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 3 )
+region = Rect2( 192, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 3 )
+region = Rect2( 256, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 3 )
+region = Rect2( 320, 0, 64, 64 )
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "idle",
+"speed": 4.0
+}, {
+"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
+"loop": true,
+"name": "talk",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=12]
+size = 8
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 7.9811, 10 )
+
+[sub_resource type="Animation" id=14]
+resource_name = "talk"
+length = 14.0
+
+[sub_resource type="DynamicFont" id=15]
+size = 8
+font_data = ExtResource( 5 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 68, 60 )
+
+[node name="GuildLady" type="StaticBody2D"]
+pause_mode = 2
+collision_layer = 129
+collision_mask = 129
+script = ExtResource( 4 )
+
+[node name="Shadow" type="Sprite" parent="."]
+position = Vector2( -0.793701, 9.52441 )
+texture = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 11 )
+animation = "talk"
+frame = 5
+playing = true
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = -85.4949
+margin_top = -28.3434
+margin_right = 110.505
+margin_bottom = 4.65668
+custom_fonts/font = SubResource( 12 )
+text = "Wow, I didn’t think you’d take so long..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+visible = false
+margin_left = -83.6611
+margin_top = -32.4603
+margin_right = 112.339
+margin_bottom = 0.539654
+custom_fonts/font = SubResource( 12 )
+text = "... you only had to find a chicken after all."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+visible = false
+margin_left = -33.7549
+margin_top = -26.6582
+margin_right = 260.245
+margin_bottom = 6.34179
+custom_fonts/font = SubResource( 12 )
+text = "Well you're in luck!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+visible = false
+margin_left = -91.522
+margin_top = -25.1873
+margin_right = 271.479
+margin_bottom = 7.81264
+custom_fonts/font = SubResource( 12 )
+text = "A quest just opened up while you were away."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label10" type="Label" parent="."]
+visible = false
+margin_left = -87.8732
+margin_top = -29.0754
+margin_right = 275.126
+margin_bottom = 3.92456
+custom_fonts/font = SubResource( 12 )
+text = "We've been looking for a new delivery boy..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="."]
+visible = false
+margin_left = -167.431
+margin_top = -45.236
+margin_right = 169.569
+margin_bottom = -6.236
+custom_fonts/font = SubResource( 12 )
+text = "Well don’t look at me like that, I’m not the one who spent 
+ages looking for a pet!
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="."]
+visible = false
+margin_left = -161.395
+margin_top = -41.2881
+margin_right = 175.605
+margin_bottom = -8.28818
+custom_fonts/font = SubResource( 12 )
+text = "Here’s the last available job. You have to deliver
+ this pizza to the knights stationed at the fort."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label7" type="Label" parent="."]
+visible = false
+margin_left = -159.693
+margin_top = -49.34
+margin_right = 177.307
+margin_bottom = -10.34
+custom_fonts/font = SubResource( 12 )
+text = "Remember, if you don’t deliver it within 5 minutes, 
+you have to give them the pizza for free and 
+you won’t receive a reward."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label8" type="Label" parent="."]
+visible = false
+margin_left = -162.307
+margin_top = -37.7105
+margin_right = 174.693
+margin_bottom = 1.2895
+custom_fonts/font = SubResource( 12 )
+text = "Head east of the village to get to the fort. 
+Good luck!
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.728752, 0.26696 )
+shape = SubResource( 13 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/talk = SubResource( 14 )
+
+[node name="Label9" type="Label" parent="."]
+margin_left = -32.7485
+margin_top = 13.0699
+margin_right = 87.2515
+margin_bottom = 38.0699
+custom_fonts/font = SubResource( 15 )
+text = "[F] to Interact
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 66
+collision_mask = 2147483650
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 16 )
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

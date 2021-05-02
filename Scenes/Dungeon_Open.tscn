@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/DoorDungeon.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Structure_Dungeon (Open).png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 44.8006, 53.976 )
+
+[node name="Dungeon_Overworld" type="StaticBody2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -55.4461, -1.12246 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2( 57.3613, -1.68369 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2( -0.44548, -8.97969 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="Door" parent="." instance=ExtResource( 1 )]
+position = Vector2( -1.33484, 38.1979 )

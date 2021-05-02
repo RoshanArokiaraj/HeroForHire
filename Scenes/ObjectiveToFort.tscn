@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Minecraftia-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Screen_Objective UI.png" type="Texture" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 6
+outline_size = 1
+outline_color = Color( 0.964706, 0.964706, 0.964706, 1 )
+font_data = ExtResource( 1 )
+
+[node name="Objective" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 130.561, -71.5304 )
+scale = Vector2( 1.25431, 1 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -54.7447
+margin_top = -3.30356
+margin_right = 68.2553
+margin_bottom = 10.6964
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Objective: Go to the Fort to the East"
+__meta__ = {
+"_edit_use_anchors_": false
+}
