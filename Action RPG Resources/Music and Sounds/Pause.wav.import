@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Pause.wav-22ad076fcc6e863b1d1bd7e583a4504c.sample"
+
+[deps]
+
+source_file="res://Action RPG Resources/Music and Sounds/Pause.wav"
+dest_files=[ "res://.import/Pause.wav-22ad076fcc6e863b1d1bd7e583a4504c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
