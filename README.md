@@ -13,4 +13,4 @@ The following materials were used to create our game:
 - Beepbox, an online music composition editor
 - Godot, a game engine based on GDScript
 
-Download here: https://drive.google.com/drive/folders/1K8sIFftWZvuI54ppVb5Ro1hlQAjqxMzF
+Download and play here: https://drive.google.com/drive/folders/1K8sIFftWZvuI54ppVb5Ro1hlQAjqxMzF
